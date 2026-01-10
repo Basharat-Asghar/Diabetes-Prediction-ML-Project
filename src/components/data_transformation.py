@@ -26,7 +26,9 @@ class DataTransformation:
                 'age', 'alcohol_consumption_per_week', 'diet_score', 'sleep_hours_per_day',
                 'screen_time_hours_per_day', 'bmi', 'waist_to_hip_ratio', 'diastolic_bp',
                 'heart_rate', 'cholesterol_total', 'hdl_cholesterol', 'glucose_fasting',
-                'glucose_postprandial', 'hba1c'
+                'glucose_postprandial', 'hba1c', 'homa_ir', 'tg_hdl_ratio', 'glysemic_gap',
+                'mean_arterial_pressure', 'obesity_risk_index', 'lifestyle_risk_score',
+                'pulse_pressure'
                 ]
             num_feat_skewed = [
                             'physical_activity_minutes_per_week', 'systolic_bp',
