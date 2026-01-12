@@ -85,7 +85,7 @@ class DataTransformation:
             return preprocessor
         except Exception as e:
             raise CustomException(e, sys)
-
+    '''
     def initiate_data_transformation(self, train_path, test_path):
         try:
             train_df = pd.read_csv(train_path)
@@ -94,5 +94,8 @@ class DataTransformation:
 
             logging.info("Obtaining preprocessor object")
             preprocessor_obj = self.get_data_transformer_object()
+
+            target_column_name = 'diagnosed_diabetes'
         except Exception as e:
             raise CustomException(e, sys)
+    '''
