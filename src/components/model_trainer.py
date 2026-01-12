@@ -13,7 +13,7 @@ class ModelTrainer:
     def build_pipeline(self):
         try:
             fe = FeatureEngineering()
-            transformer = DataTransformation.get_data_transformer_object()
+            transformer = DataTransformation().get_data_transformer_object()
 
             model = RandomForestClassifier(
             n_estimators=500,
@@ -33,6 +33,6 @@ class ModelTrainer:
             )
             logging.info('RandomForest Model Pipeline is Created')
 
-            return model
+            return pipeline
         except Exception as e:
             raise CustomException(e, sys)

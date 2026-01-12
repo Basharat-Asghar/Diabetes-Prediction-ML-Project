@@ -2,6 +2,9 @@ from sklearn.base import BaseEstimator, TransformerMixin
 import pandas as pd
 import numpy as np
 
+from src.exception import CustomException
+from src.logger import logging
+
 class FeatureEngineering(BaseEstimator, TransformerMixin):
     """
     Custom transformer for:
@@ -12,7 +15,7 @@ class FeatureEngineering(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
-    def fit(self, X, y=none):
+    def fit(self, X, y=None):
         return self
 
     def transform(self, X):

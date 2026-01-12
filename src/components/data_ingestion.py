@@ -1,6 +1,7 @@
 import os
 import sys
 from src.exception import CustomException
+from src.pipeline.train_pipeline import TrainPipeline
 from src.logger import logging
 
 import pandas as pd
@@ -21,7 +22,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Data Ingestion started")
         try:
-            df = pd.read_csv('notebook\data\diabetes_dataset.csv')
+            df = pd.read_csv(r'notebook\data\diabetes_dataset.csv')
             logging.info("Dataset read as dataframe")
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
@@ -45,3 +46,5 @@ class DataIngestion:
 if __name__ == "__main__":
     obj = DataIngestion()
     obj.initiate_data_ingestion()
+    train_pipe = TrainPipeline()
+    train_pipe.run_train_pipeline()

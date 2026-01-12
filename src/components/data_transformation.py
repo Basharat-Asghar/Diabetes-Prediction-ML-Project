@@ -5,9 +5,9 @@ from dataclasses import dataclass
 import pandas as pd
 import numpy as np
 
-from sklearn.Pipeline import Pipeline
-from sklearn.Compose import ColumnTransformer
-from sklearn.Preprocessing import StandardScaler, RobustScaler, OneHotEncoder, OrdinalEncoder
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, RobustScaler, OneHotEncoder, OrdinalEncoder
 
 from src.exception import CustomException
 from src.logger import logging
@@ -59,14 +59,14 @@ class DataTransformation:
 
             cat_pipeline = Pipeline(
                 steps=[
-                    ('one_hot_encoder', OneHotEncoder())
+                    ('one_hot_encoder', OneHotEncoder(drop='first', handle_unknown='ignore')),
                 ]
             )
 
             ordinal_pipeline = Pipeline(
                 steps=[
                     ('ordinal_encoder', OrdinalEncoder(
-                        categories=['education_order','income_order']
+                        categories=[education_order,income_order]
                     ))
                 ]
             )
