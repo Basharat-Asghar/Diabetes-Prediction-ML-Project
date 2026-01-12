@@ -2,7 +2,7 @@ import os
 import sys
 
 from sklearn.pipeline import Pipeline
-from catboost import CatBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 from src.logger import logging
 from src.exception import CustomException
@@ -15,12 +15,13 @@ class ModelTrainer:
             fe = FeatureEngineering()
             transformer = DataTransformation.get_data_transformer_object()
 
-            model = CatBoostClassifier(
-                iterations = 500,
-                depth = 5,
-                learning_rate = 0.01,
-                verbose = 0,
-                random_state = 42
+            model = RandomForestClassifier(
+            n_estimators=500,
+            max_depth=8,
+            min_samples_split=100,
+            min_samples_leaf=50,
+            n_jobs=-1,
+            random_state=42
             )
 
             pipeline = Pipeline(
@@ -30,7 +31,7 @@ class ModelTrainer:
                     ('model', model)
                 ]
             )
-            logging.info('CatBoost Model Pipeline is Created')
+            logging.info('RandomForest Model Pipeline is Created')
 
             return model
         except Exception as e:

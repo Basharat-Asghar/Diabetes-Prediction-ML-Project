@@ -44,3 +44,12 @@ def predict():
             insulin_level=float(request.form.get('insulin_level')),
             hba1c=float(request.form.get('hba1c'))
         )
+        pred_df = data.get_data_as_data_frame()
+        predict_pipeline = PredictionPipeline()
+        prediction = predict_pipeline.predict(pred_df)
+        result = 'Diabetic' if prediction[0] == 1 else 'Non-Diabetic'
+
+        return render_template('index.html', prediction=result)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)

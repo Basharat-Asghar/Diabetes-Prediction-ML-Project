@@ -7,7 +7,7 @@
 
 <h2>Diabetes Risk Prediction</h2>
 
-<form action="/predict" method="POST">
+<form action="{{ url_for('predict') }}" method="POST">
 
 Age: <input type="number" name="age"><br>
 Gender: <input type="text" name="gender"><br>
@@ -15,33 +15,33 @@ Ethnicity: <input type="text" name="ethnicity"><br>
 Education: <input type="text" name="education_level"><br>
 Income: <input type="text" name="income_level"><br>
 
-Alcohol/week: <input type="number" step="0.1" name="alcohol"><br>
-Physical Activity: <input type="number" name="activity"><br>
-Diet Score: <input type="number" name="diet"><br>
-Sleep Hours: <input type="number" name="sleep"><br>
-Screen Time: <input type="number" name="screen"><br>
+Alcohol/week: <input type="number" step="0.1" name="alcohol_consumption_per_week"><br>
+Physical Activity: <input type="number" name="physical_activity_minutes_per_week"><br>
+Diet Score: <input type="number" name="diet_score"><br>
+Sleep Hours: <input type="number" name="sleep_hours_per_day"><br>
+Screen Time: <input type="number" name="screen_time_hours_per_day"><br>
 
 BMI: <input type="number" step="0.1" name="bmi"><br>
-WHR: <input type="number" step="0.01" name="whr"><br>
+WHR: <input type="number" step="0.01" name="waist_to_hip_ratio"><br>
 
-Systolic BP: <input type="number" name="sys_bp"><br>
-Diastolic BP: <input type="number" name="dia_bp"><br>
+Systolic BP: <input type="number" name="systolic_bp"><br>
+Diastolic BP: <input type="number" name="diastolic_bp"><br>
 
-Heart Rate: <input type="number" name="hr"><br>
+Heart Rate: <input type="number" name="heart_rate"><br>
 
-Cholesterol: <input type="number" name="chol"><br>
-HDL: <input type="number" name="hdl"><br>
-LDL: <input type="number" name="ldl"><br>
-Triglycerides: <input type="number" name="tri"><br>
+Cholesterol: <input type="number" name="cholesterol_total"><br>
+HDL: <input type="number" name="hdl_cholesterol"><br>
+LDL: <input type="number" name="ldl_cholesterol"><br>
+Triglycerides: <input type="number" name="triglycerides"><br>
 
-Fasting Glucose: <input type="number" name="fasting"><br>
-PP Glucose: <input type="number" name="pp"><br>
-Insulin: <input type="number" name="insulin"><br>
+Fasting Glucose: <input type="number" name="glucose_fasting"><br>
+PP Glucose: <input type="number" name="glucose_postprandial"><br>
+Insulin: <input type="number" name="insulin_level"><br>
 HbA1c: <input type="number" step="0.1" name="hba1c"><br>
 
-Family History (0/1): <input type="number" name="family"><br>
-Hypertension (0/1): <input type="number" name="bp_hist"><br>
-Cardiac History (0/1): <input type="number" name="cv_hist"><br>
+Family History (0/1): <input type="number" name="family_history_diabetes"><br>
+Hypertension (0/1): <input type="number" name="hypertension_history"><br>
+Cardiac History (0/1): <input type="number" name="cardiovascular_history"><br>
 
 <button type="submit">Predict</button>
 
