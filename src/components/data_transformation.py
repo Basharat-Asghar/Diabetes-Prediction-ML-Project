@@ -66,7 +66,9 @@ class DataTransformation:
             ordinal_pipeline = Pipeline(
                 steps=[
                     ('ordinal_encoder', OrdinalEncoder(
-                        categories=[education_order,income_order]
+                        categories=[education_order,income_order],
+                        handle_unknown='use_encoded_value',
+                        unknown_value=-1
                     ))
                 ]
             )
