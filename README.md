@@ -228,7 +228,7 @@ It can easily be extended to:
 
 **Muhammad Basharat Asghar**\
 [Portfolio](https://basharat-asghar.github.io/BasharatPortfolio/) [LinkedIn](https://www.linkedin.com/in/basharat-asghar/) [Kaggle](https://www.kaggle.com/mbasharatasghar)\
-Data Science & Machine Learning Enthusiast
+Data Scientist & Machine Learning Enthusiast
 
 ---
 ## ⭐ Support
