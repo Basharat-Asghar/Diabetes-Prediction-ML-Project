@@ -43,3 +43,43 @@ https://diabetes-prediction-app-8y4j.onrender.com
 
 ## 📂 Project Structure
 
+project_root/
+|
+├── artifacts/
+│ └── model.pkl # Trained ML pipeline
+| └── data.csv
+| └── test.csv
+| └── train.csv
+|
+├── notebook/
+| └── 1_EDA_Diabetes_Prediction.ipynb
+| └── 2_Model_Training.ipynb
+|
+├── screenshots/
+│
+├── src/
+│ ├── components/
+| | ├── __init__.py
+│ │ ├── data_ingestion.py
+│ │ ├── feature_engineering.py
+│ │ ├── data_transformation.py
+│ │ └── model_trainer.py
+│ │
+│ ├── pipeline/
+| | ├── __init__.py
+│ │ ├── train_pipeline.py
+│ │ └── predict_pipeline.py
+│ │
+| ├── __init__.py
+│ ├── utils.py
+| ├── logger.py
+| └── exception.py
+|
+├── templates/
+│ └── index.html # Web UI
+|
+├── .gitignore
+├── app.py # Flask web application
+├── render.yaml
+├── requirements.txt # Dependencies
+├── setup.py
