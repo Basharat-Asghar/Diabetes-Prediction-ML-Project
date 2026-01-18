@@ -186,11 +186,11 @@ Users simply fill in the form and click **Predict** to see results.
 
 ## 🔐 Best Practices Followed
 
-✔ Modular architecture
-✔ Clean pipelines
-✔ Feature engineering inside pipeline
-✔ No data leakage
-✔ Logging & exception handling
+✔ Modular architecture\
+✔ Clean pipelines\
+✔ Feature engineering inside pipeline\
+✔ No data leakage\
+✔ Logging & exception handling\
 ✔ Cloud deployment
 
 ---
