@@ -41,45 +41,80 @@ https://diabetes-prediction-app-8y4j.onrender.com
 
 ---
 
-## 📂 Project Structure
 
-project_root/
-|
-├── artifacts/
-│ └── model.pkl # Trained ML pipeline
-| └── data.csv
-| └── test.csv
-| └── train.csv
-|
-├── notebook/
-| └── 1_EDA_Diabetes_Prediction.ipynb
-| └── 2_Model_Training.ipynb
-|
-├── screenshots/
-│
-├── src/
-│ ├── components/
-| | ├── __init__.py
-│ │ ├── data_ingestion.py
-│ │ ├── feature_engineering.py
-│ │ ├── data_transformation.py
-│ │ └── model_trainer.py
-│ │
-│ ├── pipeline/
-| | ├── __init__.py
-│ │ ├── train_pipeline.py
-│ │ └── predict_pipeline.py
-│ │
-| ├── __init__.py
-│ ├── utils.py
-| ├── logger.py
-| └── exception.py
-|
-├── templates/
-│ └── index.html # Web UI
-|
-├── .gitignore
-├── app.py # Flask web application
-├── render.yaml
-├── requirements.txt # Dependencies
-├── setup.py
+---
+
+## 🔹 Modular Coding Approach
+
+Instead of writing everything in one file, the project is divided into **logical modules**, each responsible for a specific task:
+
+| Module | Purpose |
+|--------|----------|
+| Data Ingestion | Reads and loads dataset |
+| Feature Engineering | Creates new meaningful features |
+| Data Transformation | Scaling & encoding |
+| Model Trainer | Builds and trains ML model |
+| Train Pipeline | Orchestrates training |
+| Predict Pipeline | Handles inference |
+| Flask App | User interface |
+
+This structure makes the system:
+- Easy to maintain  
+- Easy to debug  
+- Production-ready  
+
+---
+
+## 🔹 Data Ingestion
+
+**Purpose:**  
+Load the dataset from a file source into a Pandas DataFrame.
+
+**What happens:**
+- Reads CSV file
+- Performs basic validation
+- Returns dataset for further processing
+
+---
+
+## 🔹 Feature Engineering
+
+We create new features based on medical knowledge to improve model performance.
+
+### Examples
+
+**1. homa_ir**
+**2. obesity_risk_indexr**
+**3. lifestyle_risk_score**
+
+---
+
+## 🔹 Data Preprocessing
+
+Different numerical features behave differently, so we use different scalers:
+
+| Technique | Used for |
+|-----------|----------|
+| StandardScaler | Normally distributed data |
+| RobustScaler | Data with outliers |
+| Ordinal Encoding | Ordered categories |
+| Pass-through | Nominal categories |
+
+This ensures:
+- No data leakage  
+- Model stability  
+- Real-world reliability  
+
+---
+
+## 🔹 Machine Learning Pipeline
+
+We use **Scikit-learn Pipelines** to combine all steps:
+> Feature Engineering → Preprocessing → Model
+
+This guarantees:
+- Same transformations during training & prediction  
+- No manual preprocessing  
+- Clean production workflow  
+
+---
