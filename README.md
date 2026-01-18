@@ -226,12 +226,12 @@ It can easily be extended to:
 
 ## 👨‍💻 Author
 
-**Muhammad Basharat Asghar**
-[Portfolio](https://basharat-asghar.github.io/BasharatPortfolio/) [LinkedIn](https://www.linkedin.com/in/basharat-asghar/) [Kaggle](https://www.kaggle.com/mbasharatasghar)
+**Muhammad Basharat Asghar**\
+[Portfolio](https://basharat-asghar.github.io/BasharatPortfolio/) [LinkedIn](https://www.linkedin.com/in/basharat-asghar/) [Kaggle](https://www.kaggle.com/mbasharatasghar)\
 Data Science & Machine Learning Enthusiast
 
 ---
 ## ⭐ Support
 
-If you find this project helpful, please consider giving the repository a ⭐
+If you find this project helpful, please consider giving the repository a ⭐\
 Your support is highly appreciated!
