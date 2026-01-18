@@ -6,4 +6,5 @@ scikit-learn
 #catboost
 flask
 joblib
+gunicorn
 # -e .
