@@ -41,9 +41,6 @@ https://diabetes-prediction-app-8y4j.onrender.com
 
 ---
 
-
----
-
 ## 🔹 Modular Coding Approach
 
 Instead of writing everything in one file, the project is divided into **logical modules**, each responsible for a specific task:
@@ -84,7 +81,9 @@ We create new features based on medical knowledge to improve model performance.
 ### Examples
 
 **1. homa_ir**
+
 **2. obesity_risk_indexr**
+
 **3. lifestyle_risk_score**
 
 ---
@@ -118,3 +117,121 @@ This guarantees:
 - Clean production workflow  
 
 ---
+
+## 🔹 Model Training
+
+We experimented with multiple models:
+
+- Logistic Regression  
+- Decision Tree  
+- Random Forest  
+- XGBoost  
+- LightGBM  
+- CatBoost
+
+After evaluation, **RandomForest** was selected due to:
+
+- High ROC-AUC  
+- Stable performance  
+- Excellent handling of categorical features
+
+### Hyperparameter Tuning
+
+We applied **RandomizedSearchCV** to find optimal model parameters automatically.
+
+---
+
+## 🔹 Training Pipeline
+
+The training process is fully automated:
+
+1. Load data  
+2. Split into train/test  
+3. Build pipeline  
+4. Train model  
+5. Save trained model  
+
+The trained model is stored as:
+> artifacts/model.pkl
+
+---
+
+## 🔹 Prediction Pipeline
+
+During prediction:
+
+- Load saved pipeline  
+- Apply same transformations  
+- Generate prediction  
+
+This ensures **training-serving parity** (no mismatch).
+
+---
+
+## 🌐 Web Application (Flask)
+
+We built a clean and user-friendly web interface using Flask.
+
+### Features
+
+- 3-column layout  
+- Input validation  
+- Dropdowns for categorical data  
+- Real-time prediction  
+- Displays engineered features  
+
+Users simply fill in the form and click **Predict** to see results.
+
+---
+
+## 🔐 Best Practices Followed
+
+✔ Modular architecture
+✔ Clean pipelines
+✔ Feature engineering inside pipeline
+✔ No data leakage
+✔ Logging & exception handling
+✔ Cloud deployment
+
+---
+
+## 🧪 How to Run Locally
+
+> Clone github repo using git clone [repo link]\
+> Create enviornment: `conda create -p venv python==3.13 -y`\
+> Activate enviornment: `conda activate venv\`\
+> Install requirements: `pip install -r requirements.txt`\
+> Run `python app.py`
+
+Open in browser:
+http://127.0.0.0:5000
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how to build a real-world machine learning system following industry standards:
+- Proper code structure
+- Robust ML pipeline
+- Explainable features
+- Web deployment
+
+It can easily be extended to:
+- Add new models
+- Improve UI
+- Integrate real hospital data
+- Provide detailed health reports
+
+---
+
+## 👨‍💻 Author
+
+**Muhammad Basharat Asghar**
+[Portfolio](https://basharat-asghar.github.io/BasharatPortfolio/) [LinkedIn](https://www.linkedin.com/in/basharat-asghar/) [Kaggle](https://www.kaggle.com/mbasharatasghar)
+Data Science & Machine Learning Enthusiast
+
+---
+## ⭐ Support
+
+If you find this project helpful, please consider giving the repository a ⭐
+Your support is highly appreciated!
