@@ -24,6 +24,11 @@ You can access the deployed web application here:
 🔗 **Live Demo:**  
 https://diabetes-prediction-app-8y4j.onrender.com
 
+## 📸 Web Application Screenshots
+
+![Input Form](screenshots/diabetes_prediction_webapp_1.png)
+![Prediction Result](screenshots/diabetes_prediction_webapp_2.png)
+
 ---
 
 ## 🎯 Key Objectives
